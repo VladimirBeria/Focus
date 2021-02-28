@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack</title>
+  <link rel="stylesheet" href="./dist/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+</head>
+<body>
+<header>
+
+  <div id="dropdown__menu">
+    <div class="menu-content">
+      <div class="menu-content__item">ВСЕ НОВОСТИ</div>
+      <div class="menu-content__item">УКРАИНА</div>
+      <div class="menu-content__item">МИР</div>
+      <div class="menu-content__item">ЭКОНОМИКА</div>
+      <div class="menu-content__item">ТЕХНОЛОГИИ И НАУКА</div>
+      <div class="menu-content__item">АВТО</div>
+      <div class="menu-content__item">СТИЛЬ ЖИЗНИ</div>
+      <div class="menu-content__item">КУЛЬТУРА</div>
+    </div>
+  </div>
+
+  <div class="header row">
+    <div class="header__burger-menu col-xl-2">
+      <button class="menu__btn" onclick = "myFunction()"><i class="fas fa-bars fa-2x"></i></button>
+      <img src="img/logo.png" alt="">
+    </div>
+
+    <div class="category-row col-xl-8 ">
+      <div class="row">
+        <div class="category-row__item col-md-3">
+          <span>Категории</span>
+        </div>
+        <div class="category-row__item col-md-3">
+          <span>Спецтема</span>
+        </div>
+        <div class="category-row__item col-md-3">
+          <span>РЕЙТИНГИ</span>
+        </div>
+        <div class="category-row__item col-md-3">
+          <span>Подписка</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><img src="img/logo.png" alt=""></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <input type="text" class="form-control form-control-lg" placeholder="Поиск"> <i class="fas fa-search fa-2x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__search-bar col-xl-2">
+      <div class="change-language col-xl-7">
+        <div class="change-language_ua">
+          UA
+        </div>
+        <div class="change-language_ru">
+          RU
+        </div>
+      </div>
+
+      <button type="button" class="btn search-loop" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="main-content">
+  <div class="container">
+    <div class="main-content__top-slider row">
+
+      <div id="secondary-slider" class="splide container">
+        <div class="splide__track">
+          <ul id="secondary__list" class="progress-slider__list splide__list row">
+            <li class="progress-slider__list_item col-xl-3 splide__slide">
+              <img src="img/upper-slider/slider-item-1.png" alt="slide 2" />
+              <div class="slider-item__text-part ">
+                Леди в законе. Особый статус для жены президетна
+              </div>
+            </li>
+            <li class="progress-slider__list_item col-xl-3 splide__slide">
+              <img src="img/upper-slider/slider-item-2.png" alt="slide 1" />
+              <div class="slider-item__text-part">
+                Взрыв на Позняках в Киеве
+              </div>
+            </li>
+            <li class="progress-slider__list_item col-xl-3 splide__slide">
+              <img src="img/upper-slider/slider-item-3.png" alt="slide 3" />
+              <div class="slider-item__text-part ">
+                Потоп на западной Украине
+              </div>
+            </li>
+            <li class="progress-slider__list_item col-xl-3 splide__slide">
+              <img src="img/upper-slider/slider-item-4.png" alt="slide 4" />
+              <div class="slider-item__text-part ">
+                Цифровая трансформация бизнеса Украины
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="splide__progress">
+          <div class="splide__progress__bar">
+          </div>
+        </div>
+      </div>
+      <div id="image-slider" class="splide container">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="img/upper-slider/slider-item-1.png" alt="slide 2" />
+              <div class="slider-screen__content">
+                <div class="category-tag">
+                  <span>Политика</span>
+                </div>
+
+                <div class="slider-screen-title">
+                  Леди в законе. Зачем Зеленскому понадобился особый статус для жены президента
+                </div>
+
+                <div class="post-subtitle">
+                  Владимир Зеленский загорелся идеей разработки закона о первой леди. Для чего ему это понадобилось, и какие права и обязанности возлагаются на супругу главы государства в Украине
+                </div>
+              </div>
+
+            </li>
+            <li class="splide__slide">
+              <img src="img/upper-slider/slider-item-2.png" alt="slide 1" />
+              <div class="slider-screen__content">
+                <div class="category-tag">
+                  <span>Политика</span>
+                </div>
+
+                <div class="slider-screen-title">
+                  Леди в законе. Зачем Зеленскому понадобился особый статус для жены президента
+                </div>
+
+                <div class="post-subtitle">
+                  Владимир Зеленский загорелся идеей разработки закона о первой леди. Для чего ему это понадобилось, и какие права и обязанности возлагаются на супругу главы государства в Украине
+                </div>
+              </div>
+
+            </li>
+            <li class="splide__slide">
+              <img src="img/upper-slider/slider-item-3.png" alt="slide 3" />
+              <div class="slider-screen__content">
+                <div class="category-tag">
+                  <span>Политика</span>
+                </div>
+
+                <div class="slider-screen-title">
+                  Леди в законе. Зачем Зеленскому понадобился особый статус для жены президента
+                </div>
+
+                <div class="post-subtitle">
+                  Владимир Зеленский загорелся идеей разработки закона о первой леди. Для чего ему это понадобилось, и какие права и обязанности возлагаются на супругу главы государства в Украине
+                </div>
+              </div>
+
+            </li>
+            <li class="splide__slide">
+              <img src="img/upper-slider/slider-item-4.png" alt="slide 4" />
+              <div class="slider-screen__content">
+                <div class="category-tag">
+                  <span>Политика</span>
+                </div>
+
+                <div class="slider-screen-title">
+                  Леди в законе. Зачем Зеленскому понадобился особый статус для жены президента
+                </div>
+
+                <div class="post-subtitle">
+                  Владимир Зеленский загорелся идеей разработки закона о первой леди. Для чего ему это понадобилось, и какие права и обязанности возлагаются на супругу главы государства в Украине
+                </div>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="news-block row">
+      <div class="col-xl-3 col-md-6 news-block__item regular-item">
+        <div class="post-img">
+          <div class="category-tag">УКраина</div>
+          <img src="img/news-block-img-1.png" alt="">
+        </div>
+        <div class="news-content">
+
+          <div class="post-text">Наказание карантином. Чем грозит Украине вторая волна борьбы с коронавирусом</div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 news-block__item regular-item">
+        <div class="post-img">
+          <div class="category-tag">Технологии и наука</div>
+          <img src="img/news-block-img-2.png" alt="">
+        </div>
+        <div class="news-content">
+
+          <div class="post-text">Заговоренная связь. Все, что известно о 5G и его влиянии на здоровье</div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 news-block__item absolute-item">
+        <div class="post-img">
+          <div class="category-tag">рейтинг</div>
+          <img src="img/news-block-img-3.png" alt="">
+        </div>
+        <div class="news-content-wrapper">
+          <div class="news-content">
+            <div class="hundred">100</div>
+            <div class="post-text">Из песни слов не выкинешь. Рейтинг Фокуса:
+              самые успешные звезды шоу-бизнеса</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 news-block__item regular-item">
+        <div class="post-img">
+          <div class="category-tag">Политика</div>
+          <img src="img/news-block-img-4.png" alt="">
+        </div>
+        <div class="news-content">
+
+          <div class="post-text">Дубы и сосны. В соцсетях обсуждают сексистский скандал в "Слуге народа"</div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 news-block__item absolute-item">
+        <div class="post-img">
+          <div class="category-tag">Технологии и наука</div>
+          <img src="img/news-block-img-5.png" alt="">
+        </div>
+        <div class="news-content-wrapper">
+          <div class="news-content">
+            <div class="post-text">Заговоренная связь. Все, что известно о 5G и его влиянии на здоровье</div>
+            <div class="post-time">15:44</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 news-block__item small-block ">
+        <div class="post-img_small">
+          <div class="category-tag">политика</div>
+          <img src="img/news-block-img-6.png" alt="">
+        </div>
+        <div class="news-content">
+
+          <div class="post-text">Кабмин назначил главой МОН Сергея Шкарлета в обход Рады</div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 news-block__item small-block ">
+        <div class="post-img_small">
+          <div class="category-tag">Технологии и наука</div>
+          <img src="img/news-block-img-7.png" alt="">
+        </div>
+        <div class="news-content">
+
+          <div class="post-text">Агент изменений. Денис Малюська — о частных СИЗО, продаже тюрем и будущем люстрации</div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 news-block__item absolute-item ">
+        <div class="post-img">
+          <div class="category-tag">Политика</div>
+          <img src="img/news-block-img-8.png" alt="">
+        </div>
+        <div class="news-content-wrapper">
+          <div class="news-content">
+            <div class="post-text">Выход в люди. Как Шарий диктует информационную повестку дня в Украине</div>
+            <div class="post-time">15:44</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll">
+      <img src="img/scroll-bar-background.png" alt="">
+      <div class="scroll-title">
+        Потоп на западной Украине
+
+        <div class="scroll-title__link">
+          <a href="">смотреть все материалы</a>
+        </div>
+      </div>
+      <div class="scrollbar-content">
+        <div id="wrapper">
+          <div class="scrollbar" id="style-6">
+            <div class="force-overflow">
+              <div class="scroll-item">
+                <div class="news-content">
+                  <div class="post-text">Появилось видео затопленного Галича с воздуха</div>
+                  <div class="post-time">
+                    14:26
+                  </div>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <div class="news-content">
+                  <div class="post-text">Ущерб от наводнения на Закарпатье оценили в 125 млн гривен</div>
+                  <div class="post-time">
+                    17:10
+                  </div>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <div class="news-content">
+                  <div class="post-text">Ущерб от наводнения на Закарпатье оценили в 125 млн гривен</div>
+                  <div class="post-time">
+                    18:20
+                  </div>
+                </div>
+              </div>
+              <div class="scroll-item">
+                <div class="news-content">
+                  <div class="post-text">Ущерб от наводнения на Закарпатье оценили в 125 млн гривен</div>
+                  <div class="post-time">
+                    18:20
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="news-block row">
+      <div class="col-xl-6 col-md-12 news-block__item large-item">
+        <div class="position-relative">
+          <div class="row large-item-content-wrapper">
+            <div class="post-img col-md-6">
+              <img src="img/under-scrollbar-news/large-item-img.png" alt="">
+            </div>
+            <div class="background_black">
+              <div class="post-author">
+                Алексей Газубей
+
+                <div class="post-author__info">
+                  Главний редактор <br>focus.ua
+                </div>
+              </div>
+            </div>
+            <div class="background_black_vertical">
+            </div>
+
+
+            <div class="news-content col-md-6">
+              <div class="post-text">
+                Как Юлия Тимошенко меня в Египет отправила
+              </div>
+
+              <div class="post-subtitle">
+                В середине нулевых Киев переживал немыслимый ипотечный бум. Банки выдавали кредиты на десять и двадцать лет.
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item regular-item ">
+        <div class="post-img">
+          <div class="category-tag">Технологии и наука</div>
+          <img src="img/under-scrollbar-news/tik-tok-img.png" alt="">
+        </div>
+        <div class="news-content">
+
+          <div class="post-text">Счастье за 16 секунд. В чем секрет популярности TikTok и как соцсеть влияет на психику подростков</div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item opinion-item">
+        <div class="news-content">
+          <div class="opinion-title">
+            мнение
+          </div>
+          <div class="post-text">
+            <i class="fas fa-quote-right"></i><br>
+            “Too much против
+            me too. Почему сексистские скандалы
+            в Украине ничем не заканчиваются”
+          </div>
+
+          <div class="opinion-author">
+            <div class="opinion-author__img">
+              <img src="img/under-scrollbar-news/opinion-1.png" alt="">
+            </div>
+            Мария Бабенко
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item small-block">
+        <div class="post-img_small">
+          <div class="category-tag">Технологии и наука</div>
+          <img src="img/under-scrollbar-news/small-item-img-1.png" alt="">
+        </div>
+        <div class="news-content">
+
+          <div class="post-text">Новая нефть. Как ученые ищут редкие элементы на дне океана, в космосе и мусоре</div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item text-block">
+        <div class="news-content">
+          <div class="post-text">
+            <div class="category-tag">Технологии и наука</div>
+            Все в масках и проверка температуры: в Украине стартовала основная сессия ВНО-2020</div>
+          <div class="post-subtitle">Первый тест – по математике. Для его прохождения зарегистрировались 186 072 человека. </div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item ">
+        <img class="img-ad" src="img/under-scrollbar-news/ad-img.png" alt="">
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item small-block">
+        <div class="post-img_small">
+          <div class="category-tag">Культура</div>
+          <img src="img/under-scrollbar-news/small-item-img-2.png" alt="">
+        </div>
+        <div class="news-content">
+          <div class="post-text">Обзор Юрия Володарского: 5 книг для тех, кто предпочитает "короткий метр" в литературе</div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="line-ad">
+      <div class="line-ad-wrapper row">
+        <div class="line-ad__images col-md-5">
+          <div class="images-items">
+            <img src="img/line-ad/line-ad-item-1.png" alt="">
+            <img src="img/line-ad/line-ad-item-2.png" alt="">
+            <img src="img/line-ad/line-ad-item-3.png" alt="">
+            <img src="img/line-ad/line-ad-item-4.png" alt="">
+            <img src="img/line-ad/line-ad-item-5.png" alt="">
+          </div>
+        </div>
+        <div class="line-ad__text col-md-7">
+          <div class=" post-text">
+            Подпишись с другом!
+            <div class="post-subtitle">
+              -10% каждому
+            </div>
+
+          </div>
+          <button type="button" class="subscribe__btn">
+            Подписаться
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="rating-slider">
+      <div class="section-title">
+        Рейтинги
+      </div>
+      <div class="splide" id='slider-1'>
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <img src="img/big-slider/arrow-left.png" alt="">
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <img src="img/big-slider/arrow-right.png" alt="">
+          </button>
+        </div>
+
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="big-slider__item">
+                <div class="big-slider-wrapper">
+                  <div class="big-slider__item_img">
+                    <img src="img/big-slider/big-slider-item-1.png" alt="">
+                  </div>
+                  <div class="big-slider__item_content">
+                    <div class="opinion-title">
+                      Рейтинг
+                    </div>
+                    <div class="hundred">
+                      100
+                    </div>
+                    <div class="post-text">
+                      Рейтинг 2019
+                      Самые влиятельные украинцы
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="big-slider__item white-item">
+                <div class="big-slider-wrapper">
+                  <div class="big-slider__item_img">
+                    <img src="img/big-slider/big-slider-item-2.png" alt="">
+                  </div>
+                  <div class="big-slider__item_content">
+                    <div class="opinion-title">
+                      Рейтинг
+                    </div>
+                    <div class="post-text">
+                      Бунт кнопок. 30 лучших работодателей Украины — рейтинг Фокуса
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="big-slider__item black-item">
+                <div class="big-slider-wrapper">
+                  <div class="big-slider__item_content">
+                    <div class="opinion-title">
+                      Рейтинг
+                    </div>
+                    <div class="hundred">
+                      100
+                    </div>
+                    <div class="post-text">
+                      Рейтинг 2019<br>
+                      <span>Самые влиятельные украинцы</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-block-wrapper">
+      <div class="section-title">
+        Украина
+      </div>
+      <div class="news-block row">
+        <div class="col-xl-3 col-md-6 news-block__item regular-item ">
+          <div class="post-img">
+            <div class="category-tag">УКраина</div>
+            <img src="img/under-slider-news/news-block-img-2.png" alt="">
+          </div>
+          <div class="news-content">
+
+            <div class="post-text">Выход из карантина: Кабмин разрешил открыть кинотеатры со 2 июля</div>
+            <div class="post-time">15:44</div>
+          </div>
+
+        </div>
+        <div class="col-xl-3 col-md-6 news-block__item regular-item ">
+          <div class="post-img">
+            <div class="category-tag">УКраина</div>
+            <img src="img/under-slider-news/news-block-img-1.png" alt="">
+          </div>
+          <div class="news-content">
+
+            <div class="post-text">Проверка доверия: владелец «Три Н» Максим Криппа о махинациях в благотворительности</div>
+            <div class="post-time">15:44</div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-md-12 news-block__item large-img-item">
+          <div class="large-img-item-wrapper">
+            <div class="large-item__img">
+              <div class="category-tag">фото дня</div>
+              <img src="img/under-slider-news/news-block-large-img-1.png" alt="">
+            </div>
+            <div class="news-content">
+              <div class="post-text">
+                Бизнес и немного удовольствия: Grand Hotel Lviv Luxury & SPA
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-xl-3 col-md-6 news-block__item regular-item ">
+          <div class="post-img">
+            <div class="category-tag">УКраина</div>
+            <img src="img/under-slider-news/news-block-img-3.png" alt="">
+          </div>
+          <div class="news-content">
+
+            <div class="post-text">Пора домой. Истории мигрантов, которые вернулись в Украину из
+              ОАЭ, Китая и Польши</div>
+            <div class="post-time">15:44</div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 news-block__item opinion-item">
+          <div class="news-content">
+            <div class="opinion-title">
+              мнение
+            </div>
+            <div class="post-text">
+              <i class="fas fa-quote-right"></i><br>
+              “Государство или смерть. Какой кризис станет для Украины последним”
+            </div>
+
+            <div class="opinion-author">
+              <div class="opinion-author__img">
+                <img src="img/under-slider-news/opinion-2.png" alt="">
+              </div>
+              Михаил Багинский
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 news-block__item regular-item ">
+          <div class="post-img">
+            <div class="category-tag">УКраина</div>
+            <img src="img/under-slider-news/news-block-img-4.png" alt="">
+          </div>
+          <div class="news-content">
+
+            <div class="post-text">Бетонная пята. Как застройщики превращают украинские города в ад</div>
+            <div class="post-time">15:44</div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 news-block__item regular-item ">
+          <div class="post-img">
+            <div class="category-tag">УКраина</div>
+            <img src="img/under-slider-news/news-block-img-5.png" alt="">
+          </div>
+          <div class="news-content">
+            <div class="post-text">Смерть марафонца. Можно ли было спасти Екатерину Катющеву</div>
+            <div class="post-time">15:44</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rating-slider">
+      <div class="section-title">
+        СЕЙЧАС ПОПУЛЯРНО
+      </div>
+      <div class="splide" id="popular-now">
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <img src="img/big-slider/arrow-left.png" alt="">
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <img src="img/big-slider/arrow-right.png" alt="">
+          </button>
+        </div>
+
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="news-block__item absolute-item">
+                <div class="post-img">
+                  <div class="category-tag">протесты в США</div>
+                  <img src="img/popular-now-slider/popular-now-img-1.png" alt="">
+                </div>
+                <div class="news-content-wrapper">
+                  <div class="news-content">
+                    <div class="post-text">Жертвы собственной пропаганды. Как либеральные могут проиграть холодную войну</div>
+                    <div class="post-time">15:44</div>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+
+            <li class="splide__slide">
+              <div class="news-block__item text-block black-item">
+                <div class="category-tag">Мир</div>
+
+                <div class="news-content">
+                  <div class="post-title">Австралиец выловил рекордного красного императора и решил передать его ученым</div>
+
+                  <div class="post-time">15:44</div>
+                </div>
+              </div>
+
+            </li>
+
+            <li class="splide__slide">
+              <div class="news-block__item text-block white-item">
+                <div class="category-tag">Мир</div>
+
+                <div class="news-content">
+                  <div class="post-title">Жизнь за 80. 5 самых пожилых рекорсменов из Книги рекордов Гиннеса</div>
+
+                  <div class="post-time">15:44</div>
+                </div>
+              </div>
+
+            </li>
+
+            <li class="splide__slide">
+              <div class="news-block__item absolute-item">
+                <div class="post-img">
+                  <div class="category-tag">мир</div>
+                  <img src="img/popular-now-slider/popular-now-img-2.png" alt="">
+                </div>
+                <div class="news-content-wrapper">
+                  <div class="news-content">
+                    <div class="post-text">Дресс-код постапокалипсиса. Как коронавирус и карантин навсегда изменили стиль</div>
+                    <div class="post-time">15:44</div>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-block-wrapper">
+      <div class="section-title">
+        красивая страна
+      </div>
+      <div class="news-block row">
+        <div class="col-xl-3 col-md-6 news-block__item regular-item ">
+          <div class="post-img">
+            <div class="category-tag">УКраина</div>
+            <img src="img/beautiful-country-news/news-block-img-1.png" alt="">
+          </div>
+          <div class="news-content">
+
+            <div class="post-text">Наказание карантином. Чем грозит Украине вторая волна борьбы с коронавирусом</div>
+            <div class="post-time">15:44</div>
+          </div>
+
+        </div>
+
+        <div class="col-xl-3 col-md-6 news-block__item regular-item ">
+          <div class="post-img">
+            <div class="category-tag">УКраина</div>
+            <img src="img/beautiful-country-news/news-block-img-2.png" alt="">
+          </div>
+          <div class="news-content">
+
+            <div class="post-text">Небоскребы советских времен. Три маршрута к памятникам советского модернизма в Киеве
+            </div>
+            <div class="post-time">12 июня 2020 о 03:11</div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 news-block__item absolute-item">
+          <div class="post-img">
+            <div class="category-tag">рейтинг</div>
+            <img src="img/news-block-img-3.png" alt="">
+          </div>
+          <div class="news-content-wrapper">
+            <div class="news-content">
+              <div class="hundred">100</div>
+              <div class="post-text">Из песни слов не выкинешь. Рейтинг Фокуса:
+                самые успешные звезды шоу-бизнеса</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 news-block__item regular-item ">
+          <div class="post-img">
+            <div class="category-tag">УКраина</div>
+            <img src="img/beautiful-country-news/news-block-img-3.png" alt="">
+          </div>
+          <div class="news-content">
+
+            <div class="post-text">Как закалилась сталь. Музей Островского в Шепетовке — памятник архитектуры, а не идеологии</div>
+            <div class="post-time">12 июня 2020 о 03:11</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider_large">
+        <div class="splide" id="slider_large">
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+              <img src="img/single-item-slider/arrow-left.png" alt="">
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+              <img src="img/single-item-slider/arrow-right.png" alt="">
+            </button>
+          </div>
+
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="large-slider__item">
+                  <img src="img/single-item-slider/slide-1.png" alt="">
+
+                  <div class="category-tag">длинный фокус</div>
+
+
+                  <div class="large-slider__content">
+                    <div class="post-title">
+                      Ни тоски, ни жалости
+                    </div>
+                    <div class="post-subtitle">
+                      Почему украинки участвуют в боях без правил
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-block row">
+      <div class="col-xl-3 col-md-6 news-block__item small-block">
+        <div class="post-img_small">
+          <div class="category-tag">спорт</div>
+          <img src="img/under-single-slider-news/small-item-img-1.png" alt="">
+        </div>
+        <div class="news-content">
+
+          <div class="post-text">Финал Кубка Украины по футболу перенесут из Львова в Харьков, – СМИ</div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item text-block">
+        <div class="news-content">
+          <div class="post-text">
+            <div class="category-tag">Коронавирус в Украине</div>
+            Это винтажная атмосфера. MONATIK — о том, что такое карантин с оптимистической точки зрения</div>
+          <div class="post-subtitle">Коронавирус перевел всех в осадное положение. Пока концертные залы пусты, выступления проходят в режиме онлайн или не проходят вообще.</div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item small-block">
+        <div class="post-img_small">
+          <div class="category-tag">Культура</div>
+          <img src="img/under-scrollbar-news/small-item-img-2.png" alt="">
+        </div>
+        <div class="news-content">
+          <div class="post-text">Обзор Юрия Володарского: 5 книг для тех, кто предпочитает "короткий метр" в литературе</div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item ">
+        <img class="img-ad" src="img/under-single-slider-news/ad-1.png" alt="">
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item small-block">
+        <div class="post-img_small">
+          <div class="category-tag">авто</div>
+          <img src="img/under-single-slider-news/small-item-img-2.png" alt="">
+        </div>
+        <div class="news-content">
+
+          <div class="post-text">Вдохновленные ностальгией. 3 лимитированные серии автомобилей, посвященные славному прошлому</div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item ">
+        <img class="img-ad" src="img/under-single-slider-news/ad-2.png" alt="">
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item absolute-item ">
+        <div class="post-img">
+          <div class="category-tag">Длинный фокус</div>
+          <img src="img/under-single-slider-news/absolute-item-img-1.png" alt="">
+        </div>
+        <div class="news-content-wrapper">
+          <div class="news-content">
+            <div class="post-text">КОГДА ТЫ ДОМА: как «умный дом» LG приходит на выручку во времена турбулентности</div>
+            <div class="post-time">15:44</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 news-block__item text-block">
+        <div class="news-content">
+          <div class="post-text">
+            <div class="category-tag">Архивариус</div>
+            Мосты всей жизни. В жизни Евгения Патона не было случайностей</div>
+          <div class="post-subtitle">Его называли человеком из будущего, гениальные идеи которого по сей день используются при изготовлении сверхпрочных сплавов для мостов, железных дорог и даже космических станций. </div>
+          <div class="post-time">15:44</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="line-ad_big row">
+      <img src="img/okko-ad.png" alt="">
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="logo">
+      <img src="img/logo.png" alt="">
+    </div>
+    <div class="category-subscribe__row row">
+      <div class="col-xl-6 col-md-12">
+        <div class="category-row">
+          <div class="row">
+            <div class="category-row__item col-md-3">
+              <span>ПОЛИТИКА</span>
+            </div>
+            <div class="category-row__item col-md-3">
+              <span> УКРАИНА</span>
+            </div>
+            <div class="category-row__item col-md-3">
+              <span>ЭКОНОМИКА</span>
+            </div>
+            <div class="category-row__item col-md-3">
+              <span>культура</span>
+            </div>
+            <div class="category-row__item col-md-3">
+              <span>Мнение</span>
+            </div>
+            <div class="category-row__item col-md-3">
+              <span>рейтинги</span>
+            </div>
+            <div class="category-row__item col-md-3">
+              <span>Длинный фокус</span>
+            </div>
+            <div class="category-row__item col-md-3">
+              <span>мир</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-12">
+        <div class="footer__subscribe">
+          <div class="subscribe__list">
+            <div class="list-item">
+              <img src="img/footer/subscribe-item-1.png" alt="">
+            </div>
+            <div class="list-item">
+              <img src="img/footer/subscribe-item-2.png" alt="">
+            </div>
+            <div class="list-item">
+              <img src="img/footer/subscribe-item-3.png" alt="">
+            </div>
+          </div>
+          <div class="subscribe__content">
+            <div class="post-text">
+              Гарантировано получите скидку -10%
+            </div>
+            <div class="subscribe__btn">
+              Подписаться
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sources-rights__row row">
+      <div class="col-xl-6 col-md-12">
+        <div class="post-text">
+          <p>Все права на материалы, опубликованные на данном ресурсе, принадлежат ООО "ФОКУС МЕДИА". Какое-либо использование материалов без письменного разрешения ООО "ФОКУС МЕДИА" - запрещено. При использовании материалов с данного ресурса гиперссылка focus.ua обязательна.</p>
+
+          Данный ресурс — для пользователей возрастом от 18 лет и старше.
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-12">
+        <div class="post-text">
+          <p>Перепечатка, копирование или воспроизведение информации, содержащей ссылку на агентство ИнА "Українські Новини", в каком-либо виде строго запрещены.</p>
+
+          <p>Все материалы, которые размещены на этом сайте со ссылкой на агентство "Интерфакс-Украина", не подлежат дальнейшему воспроизведению и/или распространению в любой форме, кроме как с письменного разрешения агентства.</p>
+
+          Материалы с плашками "Р", "Новости партнеров", "Новости компаний", "Новости партий", "Инновации", "Позиция", "Спецпроект при поддержке" публикуются на коммерческой основе.
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright__row row">
+      <div class="col-xl-6 col-md-12">
+        <div class="copyright">
+          © 2020 Фокус. Все права защищены.
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-12">
+        Політика конфіденційності
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script src="./dist/bundle.js"></script>
+<script src="https://kit.fontawesome.com/12fa7e26b0.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+<script>
+  function myFunction() {
+    let dropdown = document.getElementById("dropdown__menu");
+    if (dropdown.style.display === "block") {
+      dropdown.style.display = "none";
+    } else {
+      dropdown.style.display = "block";
+    }
+  }
+</script>
+</body>
+</html>

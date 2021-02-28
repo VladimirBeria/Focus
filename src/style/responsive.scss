@@ -1,0 +1,143 @@
+$mobile-scroll_height: 200px;
+
+@media screen and (max-width: 768px) {
+  .header.row {
+    padding: 0;
+    margin: 10px;
+  }
+
+  .main-content__slider-screen__content {
+    width: 100%;
+    padding: 15px 20px;
+
+    .slider-screen-title {
+      width: 100%;
+      font-size: 13px;
+    }
+  }
+
+  .section-title {
+    padding: 0;
+    text-align: center;
+  }
+
+  .background_black {
+    display: none;
+
+    &_vertical {
+      display: none;
+    }
+  }
+
+  .news-block__item.large-item {
+    .large-item-content-wrapper {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .scroll {
+    img {
+      height: $mobile-scroll_height;
+    }
+
+    &-title {
+      display: none;
+    }
+  }
+
+  .scrollbar {
+    width: auto;
+  }
+
+  .line-ad_big {
+    img {
+      width: 100%;
+    }
+  }
+
+  .line-ad {
+    &__text {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .category-row .category-row__item {
+    text-align: center;
+  }
+
+  .footer__subscribe {
+    display: block;
+
+    .subscribe__list {
+      justify-content: center;
+      margin: 0;
+    }
+
+    .subscribe__content {
+      text-align: center;
+      width: auto;
+
+      .subscribe__btn {
+        width: auto;
+      }
+    }
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .splide {
+    padding: 0 25px;
+
+    .splide__arrow--prev {
+      left: -1rem;
+    }
+
+    .splide__arrow--next {
+      right: -1rem;
+    }
+  }
+
+  .big-slider__item{
+    width: 250px;
+  }
+
+  .big-slider__item_img{
+    img{
+      width: 100%;
+    }
+  }
+
+  .big-slider__item.white-item .big-slider__item_content .post-text{
+    font-size: 15px;
+
+  }
+
+  .big-slider__item_content .post-text {
+    font-size: 15px;
+  }
+
+  .big-slider__item.black-item .big-slider__item_content .post-text{
+    font-size: 15px;
+  }
+
+  .category-row{
+    padding: 20px 0;
+  }
+
+  #dropdown__menu{
+    left: 0;
+    top: 7%;
+    text-align: center;
+  }
+
+  .news-block__item.regular-item .news-content{
+    height: auto;
+  }
+}

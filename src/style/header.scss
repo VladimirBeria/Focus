@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+$bold: 700;
+$regular: 500;
+$lighter: 400;
+
+
+.header {
+  justify-content: space-between;
+  padding: 30px;
+  background: #FFFFFF;
+  border: 1px solid #F8F8F8;
+
+  &__burger-menu {
+    text-align: center;
+
+    img {
+      vertical-align: sub;
+    }
+
+    .fa-bars {
+      padding-right: 15px;
+    }
+  }
+
+  &__search-bar {
+    display: flex;
+    justify-content: flex-end;
+
+    .change-language {
+      display: flex;
+      font-weight: 500;
+      font-size: 18px;
+      text-transform: uppercase;
+
+      &_ru {
+        color: red;
+        padding: 0 10px;
+      }
+
+      &_ua {
+        color: #000;
+        padding: 0 10px;
+      }
+    }
+
+    &__search {
+      font-size: 20px;
+    }
+  }
+}
+
+.category-row {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    text-align: center;
+
+    span {
+      text-transform: uppercase;
+      color: #000000;
+      font-size: 18px;
+      font-weight: $bold;
+    }
+  }
+}
+
+.modal-body {
+  .form-control {
+    padding-right: 3rem;
+  }
+
+  i {
+    cursor: pointer;
+    position: absolute;
+    right: 27px;
+    top: 25%;
+  }
+}
